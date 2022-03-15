@@ -19,6 +19,6 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
