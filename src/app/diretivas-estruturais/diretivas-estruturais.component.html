@@ -1,0 +1,12 @@
+<p *ngIf="render; else elseRender" >{{renderedPhrase}}</p>
+
+<ng-template #elseRender>
+    <p>{{notRenderedPhrase}}</p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="clickRender" >{{renderedPhrase}}</p>
+<p *ngIf="!clickRender" >{{notRenderedPhrase}}</p>
+
+<button (click)="changeClickRender()" >click to {{ clickRender ? notRenderedPhrase : renderedPhrase }}</button>
