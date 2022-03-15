@@ -3,7 +3,8 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 @Component({
   selector: 'app-root',
   template: `
-    <!-- <app-title title="title from out"></app-title> -->
+    <app-data-binding></app-data-binding>
+    <!-- <app-title></app-title> -->
     <router-outlet></router-outlet>
     `
 
