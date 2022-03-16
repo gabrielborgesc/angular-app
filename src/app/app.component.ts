@@ -9,7 +9,8 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
       <h1>Topo</h1>
       <h2>fim</h2>
     </app-diretivas-estruturais> -->
-    <app-diretivas-atributos></app-diretivas-atributos>
+    <!-- <app-diretivas-atributos></app-diretivas-atributos> -->
+    <app-new-component><app-new-component>
     <router-outlet></router-outlet>
     `
 
