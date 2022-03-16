@@ -10,6 +10,8 @@ export class DiretivasAtributosComponent implements OnInit {
 
   public redcolor: boolean = true;
 
+  public date: Date = new Date();
+
   constructor() { }
 
   ngOnInit(): void {
