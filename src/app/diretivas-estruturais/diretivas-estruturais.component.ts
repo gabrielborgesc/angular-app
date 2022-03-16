@@ -14,6 +14,8 @@ export class DiretivasEstruturaisComponent implements OnInit {
 
   public render : boolean = true;
   public clickRender : boolean = true;
+
+  public list: Array<{nome: string}> = [{nome: "gabriel"}, {nome: "borges"}]
   
   constructor() { }
 
