@@ -1,10 +1,11 @@
+<h1>ngIF</h1>
+
 <p *ngIf="render; else elseRender" >{{renderedPhrase}}</p>
 
 <ng-template #elseRender>
     <p>{{notRenderedPhrase}}</p>
 </ng-template>
 
-<hr>
 
 <p *ngIf="clickRender" >{{renderedPhrase}}</p>
 <p *ngIf="!clickRender" >{{notRenderedPhrase}}</p>
@@ -13,12 +14,16 @@
 
 <hr>
 
+<h1>ngFor</h1>
+
 <ul>
         <li *ngFor="let item of list; let i = index" > {{i}} - {{ item.nome }}</li>
 </ul>
 
 
 <hr>
+
+<h1>ngModel e ngSwitch</h1>
 
 <input type="text" [(ngModel)]="switchVar" >
 <div [ngSwitch]="switchVar">
@@ -33,6 +38,8 @@
     <p *ngSwitchDefault>
         Default
     </p>
+
+<br>
 
 </div>
 
