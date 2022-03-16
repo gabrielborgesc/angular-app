@@ -16,3 +16,34 @@
 <ul>
         <li *ngFor="let item of list; let i = index" > {{i}} - {{ item.nome }}</li>
 </ul>
+
+
+<hr>
+
+<input type="text" [(ngModel)]="switchVar" >
+<div [ngSwitch]="switchVar">
+    <p *ngSwitchCase=" 'gabriel' " >
+        nome
+    </p>
+
+    <p *ngSwitchCase=" 'borges' " >
+        sobrenome
+    </p>
+
+    <p *ngSwitchDefault>
+        Default
+    </p>
+
+</div>
+
+<input type="number" [(ngModel)]="ngSwitchTestCompareVar" >
+<div [ngSwitch]="ngSwitchTestCompare()">
+    <p *ngSwitchCase=true >
+        maior que 10
+    </p>
+
+    <p *ngSwitchCase=false >
+        menor ou igual a 10
+    </p>
+
+</div>

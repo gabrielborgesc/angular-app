@@ -16,6 +16,10 @@ export class DiretivasEstruturaisComponent implements OnInit {
   public clickRender : boolean = true;
 
   public list: Array<{nome: string}> = [{nome: "gabriel"}, {nome: "borges"}]
+
+  public switchVar: string = '';
+
+  public ngSwitchTestCompareVar: number = 0;
   
   constructor() { }
 
@@ -31,6 +35,10 @@ export class DiretivasEstruturaisComponent implements OnInit {
 
   changeClickRender() : void {
     this.clickRender = !this.clickRender
+  }
+
+  ngSwitchTestCompare() : boolean {
+    return this.ngSwitchTestCompareVar > 10;
   }
 
 }
