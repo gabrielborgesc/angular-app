@@ -11,9 +11,16 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
     </app-diretivas-estruturais> -->
     <!-- <app-diretivas-atributos></app-diretivas-atributos> -->
     <!-- <app-new-component><app-new-component> -->
-    <app-input [contador]="inputContador" ></app-input>
+    <!-- <app-input [contador]="inputContador" ></app-input>
     <br>
-    <button (click)="increment()" >Increment</button>
+    <button (click)="increment()" >Increment</button> -->
+
+    <ng-template [ngIf]="receivedData">
+      <h1>{{receivedData.name}}</h1>
+      <h2>{{receivedData.age}}</h2>
+    </ng-template>
+
+    <app-output (sendData)="setData($event)" ></app-output>
 
     <router-outlet></router-outlet>
     `
@@ -22,6 +29,7 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 export class AppComponent implements OnInit{
 
   public inputContador: number = 0;
+  public receivedData: {name: string, age: number} | undefined;
 
   constructor() {}
 
@@ -30,6 +38,10 @@ export class AppComponent implements OnInit{
 
   public increment(): void{
     this.inputContador++;
+  }
+
+  public setData(data: {name: string, age: number}){
+    this.receivedData = data
   }
 
 }
