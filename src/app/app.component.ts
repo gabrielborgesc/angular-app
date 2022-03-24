@@ -15,12 +15,14 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
     <br>
     <button (click)="increment()" >Increment</button> -->
 
-    <ng-template [ngIf]="receivedData">
+    <!-- <ng-template [ngIf]="receivedData">
       <h1>{{receivedData.name}}</h1>
       <h2>{{receivedData.age}}</h2>
-    </ng-template>
+    </ng-template> -->
 
-    <app-output (sendData)="setData($event)" ></app-output>
+    <!-- <app-output (sendData)="setData($event)" ></app-output> -->
+
+    <app-food-list></app-food-list>
 
     <router-outlet></router-outlet>
     `
