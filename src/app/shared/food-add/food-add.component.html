@@ -1,2 +1,2 @@
-<input #inputValue >
-<button (click)="listAddItem(inputValue.value)" >Add item</button>
+<input [(ngModel)]="newItem" >
+<button (click)="listAddItem()" >Add item</button>

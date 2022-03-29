@@ -5,10 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class FoodListService {
 
-  private list: Array<string> = [
-    "item1",
-    "item2"
-  ]
+  private list: Array<string> = []
 
   constructor() { }
 

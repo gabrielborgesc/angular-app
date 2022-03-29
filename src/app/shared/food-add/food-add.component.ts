@@ -8,14 +8,18 @@ import { FoodListService } from 'src/app/services/food-list.service';
 })
 export class FoodAddComponent implements OnInit {
 
+  public newItem: string = "";
+
   constructor(private foodListService: FoodListService) { }
 
   ngOnInit(): void {
   }
 
-  public listAddItem(value: string){
-    this.foodListService.foodListAdd(value)
-    value = ""
+  public listAddItem(){
+    if(this.newItem !== ""){
+      this.foodListService.foodListAdd(this.newItem)
+      this.newItem = ""
+    }
   }
 
 }
