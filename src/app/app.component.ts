@@ -22,8 +22,8 @@ import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, Afte
 
     <!-- <app-output (sendData)="setData($event)" ></app-output> -->
 
+    <app-food-add></app-food-add>
     <app-food-list></app-food-list>
-
     <router-outlet></router-outlet>
     `
 
